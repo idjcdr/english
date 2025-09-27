@@ -131,4 +131,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  // Load headeren.html
+  fetch("headeren.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("headeren").innerHTML = data;
+    })
+    .catch(err => console.error("Error loading header:", err));
+
+  // Load footeren.html
+  fetch("footeren.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footeren").innerHTML = data;
+    })
+    .catch(err => console.error("Error loading footer:", err));
+});
+
 
