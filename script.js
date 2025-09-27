@@ -150,4 +150,16 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.error("Error loading footer:", err));
 });
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.dropdown-content.show {
+  display: block;
+}
+
 
