@@ -133,21 +133,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Load headeren.html
+  // Load English header
   fetch("headeren.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("headeren").innerHTML = data;
-    })
-    .catch(err => console.error("Error loading header:", err));
 
-  // Load footeren.html
+      // Bind English dropdown AFTER header loads
+      const menuBtn = document.getElementById("menuButton");
+      const dropdown = document.getElementById("menuDropdown");
+
+      menuBtn?.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        dropdown?.classList.toggle("show");
+
+        const expanded =
+          menuBtn.getAttribute("aria-expanded") === "true";
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          String(!expanded)
+        );
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".dropdown")) {
+          dropdown?.classList.remove("show");
+          menuBtn?.setAttribute("aria-expanded", "false");
+        }
+      });
+    })
+    .catch(err => console.error("Error loading English header:", err));
+
+  // Load English footer
   fetch("footeren.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("footeren").innerHTML = data;
     })
-    .catch(err => console.error("Error loading footer:", err));
+    .catch(err => console.error("Error loading English footer:", err));
 });
-
-
