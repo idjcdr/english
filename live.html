@@ -1,62 +1,64 @@
-<nav>
-    <img src="https://i.postimg.cc/43KB5mDX/idjcdr-logo-transparency-white.png" alt="IDJ Logo" />
-    <div style="display: flex; align-items: center;">
-      <a href="vivo.html" class="live-btn">LIVE</a>
-      <div class="dropdown" id="menuDropdownContainer" style="position: relative;">
-        <button id="menuButton" class="dropbtn" aria-haspopup="true" aria-expanded="false" type="button">☰ Menu</button>
-        <div id="menuDropdown" class="dropdown-content">
-          <a href="english1.html" id="nav-welcome">Home</a>
-          <a href="pastoren.html" id="nav-pastor">Pastor</a>
-          <a href="infoen.html" id="nav-contact">Information</a>
-          <a href="galeria.html" id="nav-gallery">Gallery</a>
-          <a href="index.html" id="nav-gallery">Español</a>
-          <a href="https://venmo.com/u/Valentin-Blancas" id="nav-offering" target="_blank" style="display: flex; align-items: center; gap: 8px; padding: 10px; color: #3d94f6; font-weight: bold;">
-            <img src="https://cdn.iconscout.com/icon/free/png-256/venmo-2-569346.png" alt="Venmo" style="height: 20px;"> Ofrenda / Diezmo
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<header>
-    <h1>IDJ Casa de Refugio</h1>
-    <p id="slogan">Vuelve a Casa</p>
-  </header>
+  <title>Live – IDJ Casa de Refugio</title>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animation CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+</head>
 
 <body>
 
-  <!-- Navigation -->
-<div id="header"></div>
+  <!-- header.html loads here -->
+  <div id="header"></div>
+
 
   <!-- Main Content -->
   <main>
-    <section class="section">
+
+    <section class="section" data-aos="fade-up">
+
       <iframe
         src="https://www.youtube.com/embed/videoseries?list=UUlUBz1tu129dEJY55EWU9bg"
-        title="IDJ Casa de Refugio - Recent Videos"
+        title="IDJ Casa de Refugio - Videos Recientes"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      <p id="video-info" style="margin-top: 20px;" data-en="Watch our latest videos or tune in live." data-es="Watch our latest videos or tune in live.">Watch our latest videos or tune in live.</p>
+        allowfullscreen
+      ></iframe>
+
+      <p
+        id="video-info"
+        style="margin-top: 20px;"
+        data-en="Watch our latest videos or tune in live."
+        data-es="Watch our latest videos or tune in live."
+      >
+        Watch our latest videos or tune in live.
+      </p>
+
     </section>
+
   </main>
 
-  <!-- Footer -->
-<footer>
-    <p>© 2024 IDJ Casa de Refugio | 
-      <a href="policy.html" id="footer-privacy">Privacy Policy</a> | 
-      <a href="prayer.html" id="footer-prayer">Prayer</a> | 
-      <a href="https://www.bizapedia.com/ca/idj-casa-de-refugio-inc.html" target="_blank" rel="noopener noreferrer" id="footer-church-info">Church Filing Info</a>
-    </p>
-    <div class="social-icons" role="contentinfo" aria-label="Social media links">
-      <a href="https://www.facebook.com/profile.php?id=61554815210025" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
-      </a>
-      <a href="https://www.instagram.com/idj.casaderefugio" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
-      </a>
-      <a href="https://youtube.com/@idjcasaderefugio" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />
-      </a>
-    </div>
-  </footer>
+
+  <!-- footer.html loads here -->
+  <div id="footer"></div>
+
+
+  <!-- AOS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
